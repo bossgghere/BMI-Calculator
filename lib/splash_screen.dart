@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:bmi/IntorPage.dart';
+import 'package:bmi/main.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -19,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
       Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => Intorpage(),
+            builder: (context) => MyHomePage(title: 'title'),
           ));
     });
   }
@@ -28,14 +29,14 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Colors.red,
+        color: Colors.blue,
         child: const Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Center(
                 child: Text(
-                  'APPLE',
+                  'BMI',
                   style: TextStyle(
                     fontSize: 40,
                     color: Colors.white,
@@ -44,7 +45,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 ),
               ),
               Icon(
-                Icons.apple,
+                Icons.calculate,
                 size: 80,
                 color: Colors.white,
               ),

@@ -6,31 +6,40 @@ class Intorpage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Intro Page'),
+        // backgroundColor: Colors.red,
+        // title: const Text('INDEX' , style: TextStyle(
+        //   color: Colors.lightBlue,
+        //   fontSize: 50,
+        //   fontWeight: FontWeight.bold
+        // ),),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text(
-              'Welcome',
-              style: TextStyle(
-                fontSize: 25,
+      body: Container(
+        // color: Colors.red,
+        child: Center(
+          child: Column(
+            
+            children: [
+              const Text(
+                'Welcome All',
+                style: TextStyle(
+                  fontSize: 35,
+                  fontWeight: FontWeight.w500
+                ),
               ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => MyHomePage(title: 'Title')),
-                );
-              },
-              child: const Text('DashBoard'),
-            ),
-          ],
+              const SizedBox(
+                height: 20,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MyHomePage(title: 'Title')),
+                  );
+                },
+                child: const Text('CALCULATOR'),
+              ),
+            ],
+          ),
         ),
       ),
     );
